@@ -483,7 +483,10 @@ function WhyChoose() {
 
 function Process() {
   return (
-    <Section>
+    <Section className="relative overflow-hidden">
+      <div className="pointer-events-none absolute right-[-5%] top-[-10%] -z-10 hidden h-[600px] w-[600px] opacity-10 lg:block">
+        <img src="/home_process_bg.png" alt="" className="h-full w-full object-cover" />
+      </div>
       <SectionHeader eyebrow="Our Process" title={<>Our Proven Process</>} />
       <div className="relative">
         <div className="absolute left-0 right-0 top-6 hidden h-px bg-gradient-to-r from-transparent via-hairline to-transparent lg:block" />
@@ -553,30 +556,48 @@ function Impact() {
 
 function Industries() {
   return (
-    <Section className="bg-surface-blue">
-      <SectionHeader eyebrow="Industries" title={<>Industries We Empower</>} />
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {industries.map((it, i) => (
-          <FadeUp key={it.title} delay={i * 0.05}>
-            <Link
-              to="/industries"
-              className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-hairline bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-hover"
-            >
-              <div className="pointer-events-none absolute -right-16 -top-16 h-32 w-32 rounded-full bg-gradient-brand opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-25" />
-              <div>
-                <span className="grid h-14 w-14 place-items-center rounded-2xl bg-gradient-brand text-white shadow-glow">
-                  <it.icon className="h-7 w-7" />
-                </span>
-                <h3 className="mt-5 font-display text-lg font-semibold text-ink">{it.title}</h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-ink-muted">{it.desc}</p>
-              </div>
-              <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand">
-                Explore
-                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </span>
-            </Link>
-          </FadeUp>
-        ))}
+    <Section className="bg-surface-blue pb-32 pt-24">
+      <div className="grid gap-14 lg:grid-cols-[1.1fr_1fr] lg:items-center">
+        <FadeUp>
+          <Eyebrow>Industries</Eyebrow>
+          <h2 className="mt-4 font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+            Industries We Empower
+          </h2>
+          <p className="mt-6 text-lg leading-relaxed text-ink-muted">
+            We partner with the organizations that shape how the world learns — from global publishers to public education programs.
+          </p>
+          <div className="mt-10 grid gap-4">
+            {industries.map((it, i) => (
+              <Link
+                key={it.title}
+                to="/industries"
+                className="group relative flex items-center justify-between overflow-hidden rounded-2xl border border-hairline bg-white p-5 transition-all duration-300 hover:border-brand/30 hover:shadow-hover"
+              >
+                <div className="pointer-events-none absolute -right-16 -top-16 h-32 w-32 rounded-full bg-gradient-brand opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-10" />
+                <div className="relative z-10 flex items-center gap-4">
+                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-surface-alt text-brand transition-colors group-hover:bg-gradient-brand group-hover:text-white">
+                    <it.icon className="h-5 w-5" />
+                  </span>
+                  <div>
+                    <h3 className="font-display text-base font-semibold text-ink">{it.title}</h3>
+                    <p className="text-sm text-ink-muted">{it.desc}</p>
+                  </div>
+                </div>
+                <ArrowUpRight className="relative z-10 h-5 w-5 text-brand transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </Link>
+            ))}
+          </div>
+        </FadeUp>
+        <FadeUp delay={0.1} className="relative hidden lg:block">
+          <div className="relative overflow-hidden rounded-[2.5rem] border border-hairline/50 shadow-elegant group">
+            <img 
+              src="/home_industries_new.png" 
+              alt="Industries" 
+              className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-tr from-brand/5 to-transparent pointer-events-none" />
+          </div>
+        </FadeUp>
       </div>
     </Section>
   );
