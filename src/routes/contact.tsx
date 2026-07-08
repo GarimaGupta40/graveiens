@@ -20,7 +20,7 @@ function ContactPage() {
   return (
     <>
       {/* Contact Hero Section */}
-      <Section className="relative overflow-hidden bg-charcoal pt-32 pb-20 text-white">
+      <Section className="relative overflow-hidden bg-slate-800 pt-32 pb-20 text-white">
         <div className="absolute inset-0 bg-mesh opacity-60" />
         <div className="pointer-events-none absolute -top-40 -left-32 h-[520px] w-[520px] rounded-full bg-[radial-gradient(closest-side,rgba(37,99,235,0.45),transparent_70%)]" />
         
