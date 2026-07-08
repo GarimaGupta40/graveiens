@@ -136,36 +136,95 @@ function CareersPage() {
 
       {/* Open Roles */}
       <Section id="open-roles" className="py-24">
-        <div className="mx-auto max-w-4xl">
+        <div className="mx-auto max-w-6xl">
           <SectionHeader 
             eyebrow="Open Roles" 
             title={<>Come build with us</>} 
             description="Don't see your perfect role? Send your resume to careers@graveiens.com"
           />
-          <div className="mt-12 overflow-hidden rounded-3xl border border-hairline bg-white shadow-sm">
-            {roles.map((r, i) => (
-              <FadeUp key={r.title} delay={i * 0.03}>
-                <Link
-                  to="/contact"
-                  className="group flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-hairline px-6 sm:px-8 py-6 last:border-b-0 hover:bg-surface-alt transition-colors"
-                >
-                  <div>
-                    <h3 className="font-display text-xl font-semibold text-ink group-hover:text-brand transition-colors">{r.title}</h3>
-                    <div className="mt-2 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium text-ink-muted">
-                      <span className="flex items-center gap-1.5"><Users className="h-4 w-4" /> {r.team}</span>
-                      <span className="flex items-center gap-1.5"><Clock className="h-4 w-4" /> {r.type}</span>
-                      <span className="flex items-center gap-1.5"><MapPin className="h-4 w-4" /> {r.loc}</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3 self-start sm:self-auto">
-                    <span className="text-sm font-semibold text-brand opacity-0 group-hover:opacity-100 transition-opacity hidden sm:block">Apply now</span>
-                    <span className="grid h-10 w-10 place-items-center rounded-full border border-hairline text-ink-muted transition-all group-hover:border-brand group-hover:bg-brand group-hover:text-white">
-                      <ArrowUpRight className="h-4 w-4" />
-                    </span>
-                  </div>
-                </Link>
+          
+          <div className="mt-16 grid gap-20">
+            {/* Creative & Content */}
+            <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:items-start">
+              <FadeUp>
+                <div className="sticky top-24 relative overflow-hidden rounded-[2rem] border border-hairline/50 shadow-elegant group">
+                  <img 
+                    src="/career_roles_creative.png" 
+                    alt="Creative Roles" 
+                    className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-brand/5 to-transparent pointer-events-none" />
+                </div>
               </FadeUp>
-            ))}
+              <div>
+                <h3 className="font-display text-2xl font-bold text-ink mb-6">Creative & Content</h3>
+                <div className="overflow-hidden rounded-3xl border border-hairline bg-white shadow-sm">
+                  {roles.filter(r => ["Content", "Multimedia", "Localization"].includes(r.team)).map((r, i) => (
+                    <FadeUp key={r.title} delay={i * 0.03}>
+                      <Link
+                        to="/contact"
+                        className="group flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-hairline px-6 sm:px-8 py-6 last:border-b-0 hover:bg-surface-alt transition-colors"
+                      >
+                        <div>
+                          <h4 className="font-display text-lg font-semibold text-ink group-hover:text-brand transition-colors">{r.title}</h4>
+                          <div className="mt-2 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-medium text-ink-muted">
+                            <span className="flex items-center gap-1.5"><Users className="h-3.5 w-3.5" /> {r.team}</span>
+                            <span className="flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {r.type}</span>
+                            <span className="flex items-center gap-1.5"><MapPin className="h-3.5 w-3.5" /> {r.loc}</span>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-3 self-start sm:self-auto">
+                          <span className="grid h-10 w-10 place-items-center rounded-full border border-hairline text-ink-muted transition-all group-hover:border-brand group-hover:bg-brand group-hover:text-white">
+                            <ArrowUpRight className="h-4 w-4" />
+                          </span>
+                        </div>
+                      </Link>
+                    </FadeUp>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Technology & Engineering */}
+            <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:items-start">
+              <FadeUp className="order-1 lg:order-1">
+                <div className="sticky top-24 relative overflow-hidden rounded-[2rem] border border-hairline/50 shadow-elegant group">
+                  <img 
+                    src="/career_roles_tech.png" 
+                    alt="Technology Roles" 
+                    className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-brand/5 to-transparent pointer-events-none" />
+                </div>
+              </FadeUp>
+              <div className="order-2 lg:order-2">
+                <h3 className="font-display text-2xl font-bold text-ink mb-6">Technology & Engineering</h3>
+                <div className="overflow-hidden rounded-3xl border border-hairline bg-white shadow-sm">
+                  {roles.filter(r => ["Technology", "Assessments"].includes(r.team)).map((r, i) => (
+                    <FadeUp key={r.title} delay={i * 0.03}>
+                      <Link
+                        to="/contact"
+                        className="group flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-hairline px-6 sm:px-8 py-6 last:border-b-0 hover:bg-surface-alt transition-colors"
+                      >
+                        <div>
+                          <h4 className="font-display text-lg font-semibold text-ink group-hover:text-brand transition-colors">{r.title}</h4>
+                          <div className="mt-2 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-medium text-ink-muted">
+                            <span className="flex items-center gap-1.5"><Users className="h-3.5 w-3.5" /> {r.team}</span>
+                            <span className="flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> {r.type}</span>
+                            <span className="flex items-center gap-1.5"><MapPin className="h-3.5 w-3.5" /> {r.loc}</span>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-3 self-start sm:self-auto">
+                          <span className="grid h-10 w-10 place-items-center rounded-full border border-hairline text-ink-muted transition-all group-hover:border-brand group-hover:bg-brand group-hover:text-white">
+                            <ArrowUpRight className="h-4 w-4" />
+                          </span>
+                        </div>
+                      </Link>
+                    </FadeUp>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </Section>
