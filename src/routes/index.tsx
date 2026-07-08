@@ -270,7 +270,7 @@ const trustedOrganizations = [
 
 function TrustedBy() {
   return (
-    <section className="overflow-hidden border-b border-hairline bg-surface-alt py-12">
+    <section className="overflow-hidden border-b border-hairline bg-slate-100 py-12">
       <div className="mx-auto max-w-7xl px-5 text-center lg:px-8 mb-10">
         <h3 className="font-display text-sm font-semibold uppercase tracking-widest text-ink-muted">
           Trusted by Leading Educational Organizations
@@ -278,7 +278,7 @@ function TrustedBy() {
       </div>
       <div className="group relative flex w-full overflow-hidden">
         {/* Left fade */}
-        <div className="absolute left-0 top-0 z-10 w-24 h-full bg-gradient-to-r from-surface-alt to-transparent pointer-events-none" />
+        <div className="absolute left-0 top-0 z-10 w-24 h-full bg-gradient-to-r from-slate-100 to-transparent pointer-events-none" />
         
         {/* Marquee container */}
         <div className="flex w-max min-w-full shrink-0 animate-marquee items-center gap-6 group-hover:[animation-play-state:paused]">
@@ -293,7 +293,7 @@ function TrustedBy() {
         </div>
 
         {/* Right fade */}
-        <div className="absolute right-0 top-0 z-10 w-24 h-full bg-gradient-to-l from-surface-alt to-transparent pointer-events-none" />
+        <div className="absolute right-0 top-0 z-10 w-24 h-full bg-gradient-to-l from-slate-100 to-transparent pointer-events-none" />
       </div>
     </section>
   );
