@@ -221,10 +221,9 @@ function Hero() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mt-7 max-w-2xl text-lg leading-relaxed text-white/85"
           >
-            GravEiens partners with publishers, educational institutions, EdTech companies and
-            enterprises to deliver high-quality educational content, digital learning solutions,
-            multimedia production, assessments and technology-driven learning experiences that
-            create measurable impact.
+            GravEiens partners with publishers, educational institutions, EdTech companies, and
+            enterprises to create high-quality digital learning solutions that deliver measurable
+            educational impact.
           </motion.p>
 
           <motion.div
