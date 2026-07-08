@@ -27,21 +27,22 @@ function CareersPage() {
   return (
     <>
       {/* Hero Section */}
-      <Section className="relative overflow-hidden pb-20 pt-32 sm:pt-40">
-        <div className="absolute left-1/2 top-0 -z-10 h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-b from-brand/20 to-transparent blur-[120px] opacity-70" />
+      <Section className="relative overflow-hidden bg-charcoal pt-32 pb-28 text-white">
+        <div className="pointer-events-none absolute inset-0 bg-mesh opacity-60" />
+        <div className="pointer-events-none absolute -top-40 -left-32 h-[520px] w-[520px] rounded-full bg-[radial-gradient(closest-side,rgba(37,99,235,0.45),transparent_70%)]" />
         
-        <div className="grid gap-14 lg:grid-cols-[1.1fr_1fr] lg:items-center">
+        <div className="relative grid gap-14 lg:grid-cols-[1.1fr_1fr] lg:items-center z-10">
           <FadeUp>
-            <Eyebrow>Careers</Eyebrow>
-            <h1 className="mt-6 font-display text-5xl font-bold tracking-tight text-ink sm:text-6xl">
-              Build a career that <span className="text-gradient-brand">changes how the world learns</span>
+            <Eyebrow className="text-white/80 border-white/20">Careers</Eyebrow>
+            <h1 className="mt-6 font-display text-5xl font-bold tracking-tight text-white sm:text-6xl">
+              Build a career that <span className="bg-gradient-to-r from-[#60A5FA] via-[#22D3EE] to-[#5EEAD4] bg-clip-text text-transparent">changes how the world learns</span>
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-ink-muted">
+            <p className="mt-6 text-lg leading-relaxed text-white/75">
               We're a global team of educators, designers, technologists and storytellers. If you
               care about craft and impact, we'd love to meet you.
             </p>
             <div className="mt-8">
-              <a href="#open-roles" className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white shadow-glow hover:bg-brand transition-colors">
+              <a href="#open-roles" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink shadow-glow hover:bg-brand hover:text-white transition-colors">
                 View open roles
               </a>
             </div>

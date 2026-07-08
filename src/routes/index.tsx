@@ -193,47 +193,28 @@ function Hero() {
 
       <div className="relative mx-auto max-w-7xl px-5 pb-24 pt-20 lg:px-8 lg:pb-36 lg:pt-32">
         <div className="max-w-3xl">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
+          <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.14em] text-white/90 backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-gradient-brand" />
               Educational Outsourcing · Since 2014
             </span>
-          </motion.div>
+          </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.05 }}
-            className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.35)] sm:text-6xl lg:text-[68px]"
-          >
+          <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.35)] sm:text-6xl lg:text-[68px]">
             Empowering Education Through{" "}
             <span className="bg-gradient-to-r from-white via-cyan-200 to-teal-300 bg-clip-text text-transparent">
               Innovative Digital Learning
             </span>{" "}
             Services
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="mt-7 max-w-2xl text-lg leading-relaxed text-white/85"
-          >
+          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-white/85">
             GravEiens partners with publishers, educational institutions, EdTech companies, and
             enterprises to create high-quality digital learning services that deliver measurable
             educational impact.
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.25 }}
-            className="mt-9 flex flex-wrap items-center gap-3"
-          >
+          <div className="mt-9 flex flex-wrap items-center gap-3">
             <Link
               to="/solutions"
               className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-ink transition-all hover:bg-brand hover:text-white hover:shadow-glow"
@@ -248,12 +229,9 @@ function Hero() {
               <Play className="h-4 w-4" />
               Book a Consultation
             </Link>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+          <div
             className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-xs text-white/75"
           >
             <span className="flex items-center gap-1.5">
@@ -265,7 +243,7 @@ function Hero() {
             <span className="flex items-center gap-1.5">
               <Globe2 className="h-4 w-4 text-cyan-300" /> Delivered in 40+ languages
             </span>
-          </motion.div>
+          </div>
         </div>
       </div>
 

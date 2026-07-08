@@ -42,17 +42,18 @@ const showcaseSections = [
 function IndustriesPage() {
   return (
     <>
-      <Section className="relative overflow-hidden pb-16 pt-32 sm:pt-40">
-        <div className="absolute left-1/2 top-0 -z-10 h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-b from-brand/20 to-transparent blur-[120px] opacity-70" />
+      <Section className="relative overflow-hidden bg-charcoal pt-32 pb-28 text-white">
+        <div className="pointer-events-none absolute inset-0 bg-mesh opacity-60" />
+        <div className="pointer-events-none absolute -top-40 -left-32 h-[520px] w-[520px] rounded-full bg-[radial-gradient(closest-side,rgba(37,99,235,0.45),transparent_70%)]" />
         
-        <div className="mx-auto max-w-4xl text-center">
+        <div className="relative mx-auto max-w-4xl text-center z-10">
           <FadeUp>
-            <Eyebrow className="mx-auto">Industries We Serve</Eyebrow>
-            <h1 className="mt-8 font-display text-5xl font-bold tracking-tight text-ink sm:text-7xl lg:text-8xl">
+            <Eyebrow className="mx-auto text-white/80 border-white/20">Industries We Serve</Eyebrow>
+            <h1 className="mt-6 font-display text-5xl font-bold tracking-tight text-white sm:text-6xl">
               Empowering the <br className="hidden sm:block" />
-              <span className="text-gradient-brand">education ecosystem</span>
+              <span className="bg-gradient-to-r from-[#60A5FA] via-[#22D3EE] to-[#5EEAD4] bg-clip-text text-transparent">education ecosystem</span>
             </h1>
-            <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-ink-muted sm:text-xl">
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/75">
               We work with the organizations that shape how the world learns — from global
               publishers to public education programs.
             </p>
