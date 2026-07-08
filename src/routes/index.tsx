@@ -18,6 +18,7 @@ import {
   Cpu,
   Layers,
   Handshake,
+  Code2,
   Building2,
   School,
   University,
@@ -323,80 +324,68 @@ function TrustedBy() {
 /* ---------- who we are ---------- */
 
 function WhoWeAre() {
-  const points = [
-    { icon: BookOpen, label: "Publishers & Institutions" },
-    { icon: Rocket, label: "EdTech Innovators" },
-    { icon: Briefcase, label: "Corporate Learning" },
-    { icon: Landmark, label: "Government Programs" },
-  ];
   return (
-    <Section className="bg-surface">
-      <div className="grid items-center gap-14 lg:grid-cols-12">
-        <div className="lg:col-span-6">
+    <Section>
+      <div className="grid gap-14 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+        <FadeUp>
           <Eyebrow>Who We Are</Eyebrow>
-          <h2 className="mt-5 max-w-xl font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
-            A trusted partner in{" "}
-            <span className="text-brand">digital learning</span> at global scale.
+          <h2 className="mt-4 font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+            A global partner for <span className="text-gradient-brand">digital learning</span>
           </h2>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-muted">
-            GravEiens is an educational outsourcing and digital learning solutions
-            company. We work alongside publishers, universities, EdTech companies,
-            corporate learning teams and government organizations to design,
-            develop and deliver learning experiences that create measurable impact.
+          <p className="mt-6 text-lg leading-relaxed text-ink-muted">
+            For over a decade, we have been the quiet engine behind some of the most
+            successful educational products in the world. Our teams blend pedagogical
+            expertise, creative design, and technical engineering to build learning
+            experiences that scale.
           </p>
-          <div className="mt-8 grid gap-3 sm:grid-cols-2">
-            {points.map((p) => (
-              <div
-                key={p.label}
-                className="flex items-center gap-3 rounded-xl border border-hairline bg-white p-4"
-              >
-                <span className="grid h-9 w-9 place-items-center rounded-lg bg-accent text-brand">
-                  <p.icon className="h-4 w-4" />
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            {[
+              {
+                icon: Users,
+                title: "Expert Teams",
+                desc: "SMEs, instructional designers, and engineers working as one.",
+              },
+              {
+                icon: Code2,
+                title: "Scale & Quality",
+                desc: "ISO-aligned processes delivering thousands of assets on time.",
+              },
+            ].map((f) => (
+              <div key={f.title} className="flex gap-4">
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-surface-blue text-brand">
+                  <f.icon className="h-5 w-5" />
                 </span>
-                <span className="text-sm font-medium text-ink">{p.label}</span>
+                <div>
+                  <h4 className="font-display text-base font-semibold text-ink">{f.title}</h4>
+                  <p className="mt-1 text-sm text-ink-muted">{f.desc}</p>
+                </div>
               </div>
             ))}
           </div>
-          <div className="mt-8">
+
+          <div className="mt-10">
             <Link
               to="/about"
-              className="group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-brand hover:shadow-glow"
+              className="group inline-flex items-center gap-1.5 font-semibold text-brand transition-colors hover:text-brand-2"
             >
-              About GravEiens
-              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              Learn our story
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
-        </div>
-        <div className="lg:col-span-6">
-          <div className="relative">
-            <div className="absolute -inset-4 rounded-[32px] bg-gradient-brand opacity-10 blur-2xl" />
-            <div className="relative overflow-hidden rounded-3xl border border-hairline bg-white p-8 shadow-card">
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { icon: Users, k: "Global team", v: "Educators, designers & engineers" },
-                  { icon: ShieldCheck, k: "Quality first", v: "Multi-stage editorial QA" },
-                  { icon: Cpu, k: "Modern tech", v: "AI-assisted authoring & xAPI" },
-                  { icon: Languages, k: "40+ languages", v: "Culturally adapted content" },
-                ].map((c) => (
-                  <div
-                    key={c.k}
-                    className="rounded-2xl border border-hairline bg-surface p-5"
-                  >
-                    <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-brand text-white">
-                      <c.icon className="h-4 w-4" />
-                    </span>
-                    <div className="mt-4 font-display text-sm font-semibold text-ink">
-                      {c.k}
-                    </div>
-                    <div className="mt-1 text-xs leading-relaxed text-ink-muted">
-                      {c.v}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+        </FadeUp>
+
+        {/* Premium Illustration */}
+        <FadeUp delay={0.1}>
+          <div className="relative overflow-hidden rounded-3xl border border-hairline/50 shadow-elegant group">
+            <img 
+              src="/home_who_we_are_1783501544131.png" 
+              alt="Digital Learning Ecosystem" 
+              className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-tr from-brand/10 to-transparent pointer-events-none" />
           </div>
-        </div>
+        </FadeUp>
       </div>
     </Section>
   );
@@ -405,49 +394,47 @@ function WhoWeAre() {
 /* ---------- what we do ---------- */
 
 function WhatWeDo() {
-  const highlights = [
-    { icon: Sparkles, label: "AI-assisted authoring workflows" },
-    { icon: Layers, label: "Content + tech under one roof" },
-    { icon: Globe2, label: "40+ languages, culturally adapted" },
-    { icon: ShieldCheck, label: "Multi-stage editorial & tech QA" },
-  ];
   return (
-    <Section id="services">
-      <SectionHeader
-        eyebrow="What We Do"
-        title={<>Comprehensive Educational Services Under One Roof</>}
-        description="We combine educational expertise, creative design, technology and innovation to help organizations develop engaging learning experiences that educate, inspire and deliver measurable results."
-      />
+    <Section id="services" className="bg-surface-alt/50">
+      <div className="grid gap-14 lg:grid-cols-[1.1fr_1fr] lg:items-center">
+        <FadeUp className="order-2 lg:order-1">
+          <div className="relative overflow-hidden rounded-3xl border border-hairline/50 shadow-elegant group">
+            <img 
+              src="/home_solutions_preview_1783501554207.png" 
+              alt="Comprehensive Digital Services" 
+              className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-bl from-accent-teal/10 to-transparent pointer-events-none" />
+          </div>
+        </FadeUp>
+        
+        <div className="order-1 lg:order-2">
+          <SectionHeader
+            eyebrow="What We Do"
+            title={<>Comprehensive Educational Services Under One Roof</>}
+            description="We combine educational expertise, creative design, technology and innovation to help organizations develop engaging learning experiences that educate, inspire and deliver measurable results."
+          />
 
-      {/* Feature showcase with reused hero illustration */}
-      <FadeUp>
-        <div className="mb-16 grid items-center gap-10 rounded-3xl border border-hairline bg-gradient-to-br from-surface via-white to-accent/40 p-6 shadow-card lg:grid-cols-12 lg:gap-14 lg:p-10">
-          <div className="lg:col-span-6">
-            <Eyebrow>Featured Solution</Eyebrow>
-            <h3 className="mt-4 font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-              A connected ecosystem for{" "}
-              <span className="text-brand">modern learning</span>
-            </h3>
-            <p className="mt-4 text-base leading-relaxed text-ink-muted">
-              From content authoring and multimedia to assessments, localization and
-              LMS delivery — every capability plugs into one accountable delivery
-              model, purpose-built for publishers, EdTech and enterprise learning
-              teams.
-            </p>
-            <div className="mt-6 grid gap-3 sm:grid-cols-2">
-              {highlights.map((h) => (
-                <div
-                  key={h.label}
-                  className="flex items-center gap-3 rounded-xl border border-hairline bg-white/80 p-3.5 backdrop-blur"
-                >
-                  <span className="grid h-9 w-9 place-items-center rounded-lg bg-accent text-brand">
-                    <h.icon className="h-4 w-4" />
-                  </span>
-                  <span className="text-sm font-medium text-ink">{h.label}</span>
-                </div>
+          <div className="mt-10">
+            <div className="grid gap-4 sm:grid-cols-2">
+              {[
+                { title: "Educational Content", desc: "K-12 & Higher Ed curriculum" },
+                { title: "Assessments", desc: "Item banks & psychometrics" },
+                { title: "eLearning", desc: "SCORM, HTML5 & Courseware" },
+                { title: "Multimedia", desc: "Animation, Audio & Video" },
+                { title: "Technology", desc: "Web & LMS Integrations" },
+                { title: "Localization", desc: "40+ languages supported" },
+              ].map((item, idx) => (
+                <FadeUp key={item.title} delay={idx * 0.05}>
+                  <div className="rounded-2xl border border-hairline bg-white p-5 shadow-sm transition-all hover:border-brand/30 hover:shadow-hover">
+                    <h4 className="font-display text-base font-semibold text-ink">{item.title}</h4>
+                    <p className="mt-1 text-sm text-ink-muted">{item.desc}</p>
+                  </div>
+                </FadeUp>
               ))}
             </div>
-            <div className="mt-7">
+
+            <div className="mt-10">
               <Link
                 to="/solutions"
                 className="group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-brand hover:shadow-glow"
@@ -457,44 +444,7 @@ function WhatWeDo() {
               </Link>
             </div>
           </div>
-          <div className="lg:col-span-6">
-            <div className="relative">
-              <div className="absolute -inset-6 rounded-[36px] bg-gradient-brand opacity-15 blur-2xl" />
-              <div className="relative overflow-hidden rounded-[28px] border border-hairline bg-white shadow-elegant">
-                <img
-                  src={heroImage}
-                  alt="GravEiens digital learning ecosystem — content, multimedia, assessments and AI-enabled workflows"
-                  width={1280}
-                  height={1280}
-                  loading="lazy"
-                  className="h-auto w-full"
-                />
-              </div>
-            </div>
-          </div>
         </div>
-      </FadeUp>
-
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {services.map((s, i) => (
-          <FadeUp key={s.title} delay={i * 0.04}>
-            <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-hairline bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-brand/30 hover:shadow-elegant">
-              <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-gradient-brand opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-25" />
-              <span className="grid h-12 w-12 place-items-center rounded-xl bg-accent text-brand transition-colors group-hover:bg-gradient-brand group-hover:text-white">
-                <s.icon className="h-5 w-5" />
-              </span>
-              <h3 className="mt-5 font-display text-lg font-semibold text-ink">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-muted">{s.desc}</p>
-              <Link
-                to="/solutions"
-                className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand"
-              >
-                Learn more
-                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </Link>
-            </div>
-          </FadeUp>
-        ))}
       </div>
     </Section>
   );
