@@ -166,6 +166,7 @@ function HomePage() {
   return (
     <>
       <Hero />
+      <TrustedBy />
       <WhoWeAre />
       <Impact />
       <WhatWeDo />
@@ -212,7 +213,7 @@ function Hero() {
             <span className="bg-gradient-to-r from-white via-cyan-200 to-teal-300 bg-clip-text text-transparent">
               Innovative Digital Learning
             </span>{" "}
-            Solutions
+            Services
           </motion.h1>
 
           <motion.p
@@ -222,7 +223,7 @@ function Hero() {
             className="mt-7 max-w-2xl text-lg leading-relaxed text-white/85"
           >
             GravEiens partners with publishers, educational institutions, EdTech companies, and
-            enterprises to create high-quality digital learning solutions that deliver measurable
+            enterprises to create high-quality digital learning services that deliver measurable
             educational impact.
           </motion.p>
 
@@ -236,7 +237,7 @@ function Hero() {
               to="/solutions"
               className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-ink transition-all hover:bg-brand hover:text-white hover:shadow-glow"
             >
-              Explore Solutions
+              Explore Services
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
             <Link
@@ -269,6 +270,52 @@ function Hero() {
 
       {/* Bottom fade into page */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-background" />
+    </section>
+  );
+}
+
+/* ---------- trusted by ---------- */
+
+const trustedOrganizations = [
+  "Vedantu",
+  "WASSERX",
+  "BYJU'S",
+  "Chegg",
+  "Doubtnut",
+  "Embibe",
+  "Gautam Public Sr. Sec. School",
+  "McGraw Hill",
+  "Laxmi Publications",
+  "Unacademy",
+];
+
+function TrustedBy() {
+  return (
+    <section className="overflow-hidden border-b border-hairline bg-surface py-12">
+      <div className="mx-auto max-w-7xl px-5 text-center lg:px-8 mb-10">
+        <h3 className="font-display text-sm font-semibold uppercase tracking-widest text-ink-muted">
+          Trusted by Leading Educational Organizations
+        </h3>
+      </div>
+      <div className="group relative flex w-full overflow-hidden">
+        {/* Left fade */}
+        <div className="absolute left-0 top-0 z-10 w-24 h-full bg-gradient-to-r from-surface to-transparent pointer-events-none" />
+        
+        {/* Marquee container */}
+        <div className="flex w-max min-w-full shrink-0 animate-marquee items-center gap-6 group-hover:[animation-play-state:paused]">
+          {[...trustedOrganizations, ...trustedOrganizations].map((org, i) => (
+            <div
+              key={i}
+              className="flex h-14 shrink-0 items-center justify-center rounded-full border border-hairline bg-white px-8 font-display text-sm font-semibold text-ink-muted shadow-sm transition-all duration-300 hover:border-brand/30 hover:text-ink hover:shadow-md"
+            >
+              {org}
+            </div>
+          ))}
+        </div>
+
+        {/* Right fade */}
+        <div className="absolute right-0 top-0 z-10 w-24 h-full bg-gradient-to-l from-surface to-transparent pointer-events-none" />
+      </div>
     </section>
   );
 }
@@ -368,7 +415,7 @@ function WhatWeDo() {
     <Section id="services">
       <SectionHeader
         eyebrow="What We Do"
-        title={<>Comprehensive Educational Solutions Under One Roof</>}
+        title={<>Comprehensive Educational Services Under One Roof</>}
         description="We combine educational expertise, creative design, technology and innovation to help organizations develop engaging learning experiences that educate, inspire and deliver measurable results."
       />
 
@@ -405,7 +452,7 @@ function WhatWeDo() {
                 to="/solutions"
                 className="group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-brand hover:shadow-glow"
               >
-                Explore all solutions
+                Explore all services
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
             </div>
@@ -516,7 +563,7 @@ function Process() {
 function Impact() {
   const stats = [
     { value: 200, suffix: "+", label: "Projects Delivered" },
-    { value: 400000, suffix: "+", label: "Educational Solutions" },
+    { value: 400000, suffix: "+", label: "Educational Services" },
     { value: 20000, suffix: "+", label: "Animated Learning Videos" },
     { value: 10, suffix: "+", label: "Years of Excellence" },
     { value: 40, suffix: "+", label: "Languages Supported" },

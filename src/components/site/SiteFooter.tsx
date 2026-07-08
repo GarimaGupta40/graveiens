@@ -62,7 +62,7 @@ export function SiteFooter() {
             <FooterCol
               title="Explore"
               items={[
-                { label: "Solutions", to: "/solutions" },
+                { label: "Services", to: "/solutions" },
                 { label: "Industries", to: "/industries" },
               ]}
             />

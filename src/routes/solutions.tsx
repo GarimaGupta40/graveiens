@@ -5,9 +5,9 @@ import { Section, Eyebrow, FadeUp } from "@/components/site/primitives";
 export const Route = createFileRoute("/solutions")({
   head: () => ({
     meta: [
-      { title: "Solutions — GravEiens" },
+      { title: "Services — GravEiens" },
       { name: "description", content: "Educational content, eLearning, multimedia, assessments, localization, accessibility and more from GravEiens." },
-      { property: "og:title", content: "Solutions — GravEiens" },
+      { property: "og:title", content: "Services — GravEiens" },
       { property: "og:description", content: "Comprehensive educational outsourcing and digital learning services." },
     ],
   }),
@@ -36,7 +36,7 @@ function SolutionsPage() {
         
         <div className="mx-auto max-w-4xl text-center">
           <FadeUp>
-            <Eyebrow className="mx-auto">Our Solutions</Eyebrow>
+            <Eyebrow className="mx-auto">Our Services</Eyebrow>
             <h1 className="mt-8 font-display text-5xl font-bold tracking-tight text-ink sm:text-7xl lg:text-8xl">
               Next-generation <br className="hidden sm:block" />
               <span className="text-gradient-brand">learning experiences</span>
