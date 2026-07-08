@@ -34,11 +34,11 @@ function AboutPage() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-charcoal pt-32 pb-28 text-white">
-        <div className="absolute inset-0 bg-mesh opacity-60" />
-        <div className="absolute -top-40 -left-32 h-[520px] w-[520px] rounded-full bg-[radial-gradient(closest-side,rgba(37,99,235,0.45),transparent_70%)]" />
-        <div className="absolute -bottom-40 right-[-8%] h-[560px] w-[560px] rounded-full bg-[radial-gradient(closest-side,rgba(20,184,166,0.28),transparent_70%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-mesh opacity-60" />
+        <div className="pointer-events-none absolute -top-40 -left-32 h-[520px] w-[520px] rounded-full bg-[radial-gradient(closest-side,rgba(37,99,235,0.45),transparent_70%)]" />
+        <div className="pointer-events-none absolute -bottom-40 right-[-8%] h-[560px] w-[560px] rounded-full bg-[radial-gradient(closest-side,rgba(20,184,166,0.28),transparent_70%)]" />
         <div
-          className="absolute inset-0 opacity-[0.08]"
+          className="pointer-events-none absolute inset-0 opacity-[0.08]"
           style={{
             backgroundImage:
               "linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px)",
@@ -47,7 +47,7 @@ function AboutPage() {
               "radial-gradient(ellipse 70% 60% at 50% 50%, black 40%, transparent 85%)",
           }}
         />
-        <div className="relative mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[1.15fr_1fr] lg:items-center lg:px-8">
+        <div className="relative z-10 mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[1.15fr_1fr] lg:items-center lg:px-8">
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-3 py-1 text-xs font-medium uppercase tracking-[0.14em] text-white/80 backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-gradient-brand" />
